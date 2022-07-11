@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background: white;
+}
+
+.menu{
+    font-family: Segoe UI;
+    list-style: none;
+    padding: 0;
+    background: black;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 2rem 3rem;
+    display: block;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover{
+    background: #6579EB;
+}
+
+#fotoCarro{
+    position: absolute;
+    top: 20%;
+    left: 80;
+    height: 100%;
+    width: 200%;
+    height: 200px;  
+}
+
+#contenido{
+    position: absolute;
+    top: 25%;
+    left: 6%;
+    height: 81%;
+    width: 80%;
+    color: black;
+    overflow: auto;   
+}
+
+.contenido{
+    font-family: Segoe UI;
+}
+
+.bottonDescuento{
+    background-color: black;
+    width: 10%;
+    text-align: center;
+}
+
+#piePagina {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 15%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
