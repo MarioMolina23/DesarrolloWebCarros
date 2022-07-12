@@ -14,8 +14,9 @@ body{
     list-style: none;
     padding: 0;
     background: black;
+    top: 0;
+    height: 8%;
     width: 100%;
-    max-width: 1300px;
     margin: auto;
 }
 
@@ -63,11 +64,30 @@ body{
     width: 10%;
     text-align: center;
 }
+#titulo{
+    position: absolute;
+    top: 17%;
+    left: 0;
+    height: 81%;
+    width: 90%;
+    text-align: center;
+    text-justify: distribute;
+}
+#section{
+    position: absolute;
+    top: 28%;
+    left: 0;
+    height: 81%;
+    width: 90%;
+    text-align: center;
+    text-justify: distribute;
+}
 
 #piePagina {
     position: absolute;
     bottom: 0;
     left: 0;
+    top: 170%;
     height: 15%;
     width: 100%;
     background-color: black;

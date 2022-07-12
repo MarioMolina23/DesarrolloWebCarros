@@ -15,7 +15,6 @@ body{
     padding: 0;
     background: black;
     width: 100%;
-    max-width: 1300px;
     margin: auto;
 }
 
@@ -92,12 +91,13 @@ body{
     position: relative;
 }  
 .piePagina {
+    position: absolute;
     bottom: 0;
     left: 0;
-    height: 4rem;
+    top: 190%;
+    height: 15%;
     width: 100%;
     background-color: black;
     color: white;
     text-align: center;
-    position: fixed;
 }
