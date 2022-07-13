@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
+
 <html>
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estiloContacto.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>CONTACTO</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="galeria.html">GALERÍA</a></li>
+                <li><a href="#">CONTACTO</a></li>
+                <li><a href="acercaDe.html">ACERCA DE</a></li>
+                <li><a href="terminosCondiciones.html">TÉRMINOS Y CONDICIONES</a></li>
+                <li><a href="login.html"><p style="color:yellow"><font size=2>LOGIN</font></p></a></li>
+                <li><a href="registrarse.html"><p style="color:yellow"><font size=2>REGISTRARSE</font></p></a></li>
+            </ul>
+        </nav>
+        <form id="formulario">
+            <br><br><label for ="nombre"><strong>Nombre:</strong></label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Digitar nombre">
+            <br>
+            <label for ="email"><strong>Email:</strong></label><br>
+            <input type="email" id="email" name="email" placeholder="Digitar su correo">
+            <br>
+            <br>
+            <label for ="email"><strong>Comentario:</strong></label><br>
+            <textarea rows="10" cols="80" id="comentario" placeholder="Ingrese el comentario" name="comentario"></textarea>
+            <br>
+            <button type="button">Enviar</button>
+            <button type="reset"> Reset</button>
+        </form>
+        <footer id="piePagina">
+            &COPY; IIQ-2022 Curso desarrollo Web SJ - <address style="display: inline">Fidelitas, San Pedro</address> <address style="display: inline">Tel: 8888-8888</address>
+        </footer>
     </body>
 </html>
