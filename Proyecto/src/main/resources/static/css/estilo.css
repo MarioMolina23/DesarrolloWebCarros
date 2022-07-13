@@ -39,10 +39,7 @@ body{
 #fotoCarro{
     position: absolute;
     top: 20%;
-    left: 80;
-    height: 100%;
-    width: 200%;
-    height: 200px;  
+    width: 92%; 
 }
 
 #contenido{
