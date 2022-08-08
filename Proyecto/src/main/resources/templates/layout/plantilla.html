@@ -1,0 +1,37 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Venta de Carros</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <header th:fragment="header">
+            <h2>Venta de Carros</h2>
+        </header>
+        <div>
+            <li>
+                <a th:href="@{/AcercaDe}"> Acerca de </a>
+            </li>
+            <li>
+                <a th:href="@{/Contacto}"> Contacto </a>
+            </li>
+            <li>
+                <a th:href="@{/Galeria}"> Galeria </a>
+            </li>
+            <li>
+                <a th:href="@{/Login}"> Login </a>
+            </li>
+            <li>
+                <a th:href="@{/Register}"> Register </a>
+            </li>
+            <li>
+                <a th:href="@{/TerminosCondiciones}"> Terminos y Condiciones </a>
+            </li>
+        </div>
+        <footer th:fragment="footer">
+            <p>&COPY Derechos Reservados 2002</p>
+        </footer>
+
+    </body>
+</html>
