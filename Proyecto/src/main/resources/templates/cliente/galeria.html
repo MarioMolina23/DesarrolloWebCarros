@@ -1,67 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
 
-<head th:replace="layout/plantilla::head"></head>
-<header th:replace="layout/plantilla::header"></header>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <title>Hello, world!</title>
+        <link href="../../static/css/estiloGaleria.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div>GALERIA</div>
+        
+       <div class="row"> 
+           <div class="col-lg-4">
+               <img src="../../static/imagenes.galeria/AUDI.jpeg" alt="Galeria Imagen"/>
+       <div class="col-lg-4">
+           <img src="../../static/imagenes.galeria/BMW.jpeg" alt="Galeria Imagen"/>
+       <div class="col-lg-4">
+           <img src="../../static/imagenes.galeria/HONDA.jpeg" alt="Galeria Imagen"/>
+                   
+       <div class="col-lg-4">
+           <img src="../../static/imagenes.galeria/HYUNDAI.jpeg" alt="Galeria Imagen"/>
+                   
+       <div class="col-lg-4">
+           <img src="../../static/imagenes.galeria/LEXUS.jpeg" alt="Galeria Imagen"/>
+       <div class="col-lg-4">
+           <img src="../../static/imagenes.galeria/MITSUBISHI.jpeg" alt="Galeria Imagen"/>
+        <div class="col-lg-4"> 
+            <img src="../../static/imagenes.galeria/PORTADA.jpeg" alt="Galeria Imagen"/>
+         <div class="col-lg-4"> 
+             <img src="../../static/imagenes.galeria/TOYOTA.jpeg" alt="Galeria Imagen"/>
+         <div class="col-lg-4"> 
+             <img src="../../static/imagenes.galeria/TOYOTA2.jpeg" alt="Galeria Imagen"/>
+         <div class="col-lg-4"> 
+             <img src="../../static/imagenes.galeria/TOYOTA3.jpeg" alt="Galeria Imagen"/>
+          <div class="col-lg-4">                
+              <img src="../../static/imagenes.galeria/VOLVO.jpeg" alt="Galeria Imagen"/>
+              </div>
+    </body>
+</html>
 
-<body>
-    <div class="contenedor-imagenes">
-        <div class="imagen">
-            <img src="images/AUDI.jpg" alt="" />
-        </div>
-
-        <div class="imagen">
-            <img src="images/BMW.jpg" alt="" />
-        </div>
-
-
-        <div class="imagen">
-            <img src="images/HONDA.jpg" alt="" />
-        </div>
-
-
-        <div class="imagen">
-            <img src="images/HYUNDAI.png" alt="" />
-        </div>
-
-
-        <div class="imagen">
-            <img src="images/LEXUS.png" alt="" />
-        </div>
-
-
-        <div class="imagen">
-            <img src="images/MITSUBISHI.jpg" alt="" />
-        </div>
-
-
-        <div class="imagen">
-            <img src="images/TOYOTA.png" alt="" />
-        </div>
-
-
-        <div class="imagen">
-            <img src="images/TOYOTA2.png" alt="" />
-        </div>
-
-
-        <div class="imagen">
-            <img src="images/TOYOTA3.png" alt="" />
-        </div>
-
-
-        <div class="imagen">
-            <img src="images/VOLVO.jpg" alt="" />
-        </div>
-
-        <div class="imagen">
-            <img src="images/PORTADA_1.png" alt="" />
-        </div>
-
-        <div class="imagen">
-            <img src="images/HYUNDAI ACCENT.jpg" alt="" />
-        </div>
-
-</body>
 <footer th:replace="layout/plantilla::footer"></footer>
 </html>
+
