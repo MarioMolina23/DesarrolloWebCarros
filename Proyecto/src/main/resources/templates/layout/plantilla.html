@@ -28,19 +28,23 @@
                             </li>
                             <li class="nav-item">
                                 <small>.</small>
-                                <a class="nav-link" style= "color:white" th:href="@{/cliente/galeria}">GALERÍA</a>
+                                <a class="nav-link" style= "color:white" th:href="@{/cliente/galeria}"
+                                   th:text="#{menu.galeria}">GALERÍA</a>
                             </li>
                             <li class="nav-item">
                                 <small>.</small>
-                                <a class="nav-link" style= "color:white" th:href="@{/cliente/contacto}">CONTACTO</a>
+                                <a class="nav-link" style= "color:white" th:href="@{/cliente/contacto}"
+                                   th:text="#{menu.contacto}">CONTACTO</a>
                             </li>
                             <li class="nav-item">
                                 <small>.</small>
-                                <a class="nav-link" style= "color:white" th:href="@{/cliente/acercaDe}">ACERCA DE</a>
+                                <a class="nav-link" style= "color:white" th:href="@{/cliente/acercaDe}"
+                                   th:text="#{menu.acercaDe}">ACERCA DE</a>
                             </li>
                             <li class="nav-item">
                                 <small>.</small>
-                                <a class="nav-link" style= "color:white" th:href="@{/cliente/terminosCondiciones}">TÉRMINOS Y CONDICIONES</a>
+                                <a class="nav-link" style= "color:white" th:href="@{/cliente/terminosCondiciones}"
+                                   th:text="#{menu.terminos}">TÉRMINOS Y CONDICIONES</a>
                             </li>
                             <li class="nav-item">
                                 <small>...............................................</small>
@@ -55,25 +59,30 @@
                             </li>                            
                             <li class="nav-item">
                                 <small>.</small>
-                                <a class="nav-link" style= "color:yellow" th:href="@{/cliente/register}">REGISTRARSE</a>
+                                <a class="nav-link" style= "color:yellow" th:href="@{/cliente/register}"
+                                   th:text="#{menu.registrarse}">REGISTRARSE</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-        <footer th:fragment="footer" class="position-fixed bottom-0 start-0 end-0 bg-info text-white mt-5 p-2">
-            <div class="container">
-                <div class="col"> 
-                    <p class="lead text-center">
-                        &COPY [[#{plantilla.derechos}]]
-                        <a th:href="@{/(lang=es)}">ES</a>
-                        <a th:href="@{/(lang=en)}">EN</a>
-                        <br>
-                        <a class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/administrador/modificarVehiculo}" style= "background: red">
-                            ADMINISTRAR PAGINA
-                        </a>
-                    </p>
+        <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+            <div class="container text-center">
+                <div class="container">
+                    <div class="col"> 
+                        <small class="lead text-center" style= "color:white">
+                            &COPY [[#{plantilla.derechos}]]
+                            <a th:href="@{/(lang=es)}">ES</a>
+                            <a th:href="@{/(lang=en)}">EN</a>
+                            <br>
+                            <a class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')"
+                               th:href="@{/administrador/modificarVehiculo}" style= "background: red"
+                               th:text="#{menu.administrar}">
+                                ADMINISTRAR PÁGINA
+                            </a>
+                        </small>
+                    </div>
                 </div>
             </div>
         </footer>
