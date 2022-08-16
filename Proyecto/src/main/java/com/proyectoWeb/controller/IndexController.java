@@ -6,33 +6,41 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class indexController {
     
-    @GetMapping("/")
-    public String index() {
+    @GetMapping("/index")
+    public String inicio() {
         return "index";
     }
-
-    @GetMapping("/login")
+    
+    @GetMapping("/cliente/galeria")
+    public String galeria (){
+        return "/cliente/galeria";
+    }
+    
+    @GetMapping("/cliente/contacto")
+    public String contacto() {
+        return "/cliente/contacto";
+    }
+    
+    @GetMapping("/cliente/acercaDe")
+    public String acercaDe() {
+        return "/cliente/acercaDe";
+    }
+    
+    @GetMapping("/cliente/terminosCondiciones")
+    public String terminosCondiciones() {
+        return "/cliente/terminosCondiciones";
+    }
+    
+    @GetMapping("/cliente/login")
     public String login() {
         return "/cliente/login";
     }
 
-    @GetMapping("/registro")
+    @GetMapping("/cliente/register")
     public String registro() {
         return "/cliente/register";
     }
+    
+    
 
-    @GetMapping("/acerca")
-    public String acerca() {
-        return "/cliente/acercaDe";
-    }
-
-    @GetMapping("/contacto")
-    public String contacto() {
-        return "/cliente/contacto";
-    }
-
-    @GetMapping("/carros")
-    public String galeria() {
-        return "/cliente/galeria";
-    }
-}   
+}

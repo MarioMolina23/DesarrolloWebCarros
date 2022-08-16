@@ -11,6 +11,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 
 @Configuration
 public class TemplateResolverConfiguration {
+    
     @Bean
     public SpringResourceTemplateResolver TemplateResolver_0(){
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver ();
@@ -20,6 +21,7 @@ public class TemplateResolverConfiguration {
         templateResolver.setCharacterEncoding("UTF-8");
         templateResolver.setOrder(0);
         templateResolver.setCheckExistence(true);
+        
         return templateResolver;
     }
     
@@ -32,8 +34,10 @@ public class TemplateResolverConfiguration {
         templateResolver.setCharacterEncoding("UTF-8");
         templateResolver.setOrder(1);
         templateResolver.setCheckExistence(true);
+        
         return templateResolver;
     }
+    
     @Bean
     public SpringResourceTemplateResolver TemplateResolver_2(){
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver ();

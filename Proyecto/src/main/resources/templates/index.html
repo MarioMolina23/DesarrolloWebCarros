@@ -1,9 +1,18 @@
-<!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
-    <head th:replace="layout/plantilla::head"></head>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://thymeleaf.org/extras/spring-security">
+    <head th:fragment="head">
+        <title>Index_Proyecto</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    </head>
     <header th:replace="layout/plantilla::header"></header>
     <body>
-        
+         <div>Index</div>
     </body>
     <footer th:replace="layout/plantilla::footer"></footer>
 </html>
