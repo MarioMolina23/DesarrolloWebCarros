@@ -9,37 +9,12 @@ body{
     background: white;
 }
 
-.menu{
-    font-family: Segoe UI;
-    list-style: none;
-    padding: 0;
-    background: black;
-    top: 0;
-    height: 8%;
-    width: 100%;
-    margin: auto;
-}
-
-.menu li a{
-    text-decoration: none;
-    color: white;
-    padding: 2rem 3rem;
-    display: block;
-}
-
-.menu li{
-    display: inline-block;
-    text-align: center;
-}
-
-.menu li a:hover{
-    background: #6579EB;
-}
-
 #fotoCarro{
+    
     position: absolute;
     top: 20%;
-    width: 92%; 
+    width: 100%; 
+    
 }
 
 #contenido{
@@ -56,20 +31,13 @@ body{
     font-family: Segoe UI;
 }
 
-.bottonDescuento{
+.bottonCompra{
     background-color: black;
+    height: 20%;
     width: 10%;
     text-align: center;
 }
-#titulo{
-    position: absolute;
-    top: 17%;
-    left: 0;
-    height: 81%;
-    width: 90%;
-    text-align: center;
-    text-justify: distribute;
-}
+
 #section{
     position: absolute;
     top: 28%;
@@ -92,14 +60,11 @@ body{
     text-align: center;
 }
 
-#barranegra {
+#imagen {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    top: 85%;
-    height: 50%;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
+    top: 23%;
+    left: 40%;
+    background-color: #24a1df;
+    color: black;
+    overflow: auto;
 }

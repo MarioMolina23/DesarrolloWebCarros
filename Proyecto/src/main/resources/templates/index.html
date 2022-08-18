@@ -9,10 +9,26 @@
         <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
         <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
         <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
     </head>
     <header th:replace="layout/plantilla::header"></header>
+
     <body>
-         <div>Index</div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section id="imagen">
+            <img src="images/PORTADA.png" alt=""/>
+        </section>
+        <section id="contenido">
+            <p style="color:black"><font size=3>MEJOR CALIDAD & MEJOR PRECIO</font></p>
+            <p style="color:black"><font size=7>LA MEJOR<br>OPORTUNIDAD</font></p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md">
+                <button class="btn btn-primary me-md-2" type="button" style="background: black">Comprar</button>
+            </div>
+        </section>
     </body>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer th:replace="layout/plantilla::footer"></footer>
 </html>

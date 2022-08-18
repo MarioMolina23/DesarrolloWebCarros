@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://thymeleaf.org/extras/spring-security">
+    <head th:fragment="head">
+        <title>AcercaDe_Proyecto</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    </head>
+    <header th:replace="layout/plantilla::header"></header>
+
+    <body>
+        <div class="container-fluid" style="background-color: red">
+            <h2>Lista de Vehiculos</h2>
+            <a th:href="@{/nuevoVehiculo}">Nuevo Vehiculo</a>
+            <div th:if="${vehiculos != null and !vehiculos.empty}">
+                <table class="table table-dark table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Ano</th>
+                            <th>Precio</th>
+                            <th>Modificar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="vehiculo : ${vehiculos}">
+                            <td th:text="${vehiculo.marca}"></td>
+                            <td th:text="${vehiculo.modelo}"></td>
+                            <td th:text="${vehiculo.ano}"></td>
+                            <td th:text="${vehiculo.precio}"></td>
+                            <td><a th:href="@{/modificarVehiculo/} + ${vehiculo.id}">Modificar</a></td>
+                            <td><a th:href="@{/eliminarVehiculo/} + ${vehiculo.id}">Eliminar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:if="${vehiculos == null or vehiculos.empty}">
+                No tenemos lista de vehiculos que mostrar
+            </div>
+    </body>
+    <footer th:replace="layout/plantilla::footer"></footer>
+</html>

@@ -41,6 +41,8 @@ public class indexController {
         return "/cliente/register";
     }
     
-    
-
+    @GetMapping("/administrador/vehiculos")
+    public String admiVehiculo() {
+        return "/administrador/vehiculos";
+    }
 }

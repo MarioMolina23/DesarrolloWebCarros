@@ -73,11 +73,11 @@
                     <div class="col"> 
                         <small class="lead text-center" style= "color:white">
                             &COPY [[#{plantilla.derechos}]]
-                            <a th:href="@{/(lang=es)}">ES</a>
-                            <a th:href="@{/(lang=en)}">EN</a>
+                            <a th:href="@{/index(lang=es)}">ES</a>
+                            <a th:href="@{/index(lang=en)}">EN</a>
                             <br>
                             <a class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')"
-                               th:href="@{/administrador/modificarVehiculo}" style= "background: red"
+                               th:href="@{/}" style= "background: red"
                                th:text="#{menu.administrar}">
                                 ADMINISTRAR PÁGINA
                             </a>
