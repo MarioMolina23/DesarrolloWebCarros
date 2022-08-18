@@ -48,34 +48,5 @@ public class vehiculoController {
         vehiculoService.delete(vehiculo);
         return "redirect:/";
     }
-        
-    @GetMapping("/Galeria")
-    public String galeria (){
-        return "/cliente/galeria";
-    }
-    
-    @GetMapping("/AcercaDe")
-    public String acercaDe() {
-        return "/cliente/acercaDe";
-    }
-        
-    @GetMapping("/Contacto")
-    public String contacto() {
-        return "/cliente/contacto";
-    }
 
-    @GetMapping("/Login")
-    public String login() {
-        return "/cliente/login";
-    }
-
-    @GetMapping("/Register")
-    public String register() {
-        return "/cliente/register";
-    }
-    
-    @GetMapping("/TerminosCondiciones")
-    public String terminosCondiciones() {
-        return "/cliente/terminosCondiciones";
-    }
 }

@@ -20,11 +20,17 @@ body{
 #contenido{
     position: absolute;
     top: 25%;
-    left: 6%;
+    left: 4%;
     height: 81%;
     width: 80%;
     color: black;
-    overflow: auto;   
+    overflow: auto;
+}
+
+.letra{
+    font-size: xx-large;
+    -webkit-text-stroke: 2px black;
+    color: black;     
 }
 
 .contenido{
@@ -62,8 +68,8 @@ body{
 
 #imagen {
     position: absolute;
-    top: 23%;
-    left: 40%;
+    top: 26%;
+    left: 54%;
     background-color: #24a1df;
     color: black;
     overflow: auto;

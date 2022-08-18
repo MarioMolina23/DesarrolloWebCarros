@@ -40,6 +40,41 @@ public class indexController {
     public String registro() {
         return "/cliente/register";
     }
+
+    @GetMapping("/carros/audi")
+    public String carroAudi() {
+        return "/carros/audi";
+    }
+
+    @GetMapping("/carros/bmw")
+    public String carrobmw() {
+        return "/carros/bmw";
+    }
+
+    @GetMapping("/carros/honda")
+    public String carroHonda() {
+        return "/carros/honda";
+    }
+
+    @GetMapping("/carros/mitsubishi")
+    public String carroMitsubishi() {
+        return "/carros/mitsubishi";
+    }
+
+    @GetMapping("/carros/toyota")
+    public String carroToyota() {
+        return "/carros/toyota";
+    }
+
+    @GetMapping("/carros/volvo")
+    public String carroVolvo() {
+        return "/carros/volvo";
+    }
+    
+    @GetMapping("/comprar/compra")
+    public String compra() {
+        return "/comprar/compra";
+    }
     
     @GetMapping("/administrador/vehiculos")
     public String admiVehiculo() {
