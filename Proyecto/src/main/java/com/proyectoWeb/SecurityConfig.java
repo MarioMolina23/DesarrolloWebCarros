@@ -51,3 +51,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .exceptionHandling().accessDeniedPage("/errores/403");
     }   
 }
+
+//.loginPage("/login").permitAll().defaultSuccessUrl("/index", true)
