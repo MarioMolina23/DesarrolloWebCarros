@@ -20,13 +20,13 @@ public class VehiculoServiceImpl implements VehiculoService {
     }
 
     @Override
-    @Transactional()
+    @Transactional
     public void save(Vehiculo vehiculo) {
         vehiculoDao.save(vehiculo);
     }
 
     @Override
-    @Transactional()
+    @Transactional
     public void delete(Vehiculo vehiculo) {
         vehiculoDao.delete(vehiculo);
     }

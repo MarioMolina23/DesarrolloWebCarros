@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://thymeleaf.org/extras/spring-security">
+    <head th:fragment="head">
+        <title>AcercaDe_Proyecto</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    </head>
+    <header th:replace="layout/plantilla::header"></header>
+    <body>
+        <div class="container-fluid" style="background-color: #ffcc00">
+            <h2>Información de Vehículos:</h2>
+            <form th:action="@{/guardarVehiculo}"
+                  method="post"
+                  th:object="${vehiculo}">
+                <input type="hidden" name="id" th:field="*{id}"/>
+                <label for="marca">Marca:</label>
+                <input type="text" name="marca" th:field="*{marca}"/>
+                <br/>
+                <label for="modelo">Modelo:</label>
+                <input type="text" name="modelo" th:field="*{modelo}"/>
+                <br/>                
+                <label for="ano">Año:</label>
+                <input type="text" name="ano" th:field="*{ano}"/>
+                <br/>                    
+                <label for="precio">Precio:</label>
+                <input type="text" name="precio" th:field="*{precio}"/>
+                <br/>
+                <br>
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-primary" type="button">
+                        <input type="submit" name="guardar" value="Guardar"/>
+                    </button>
+                    <a th:href="@{/}">
+                        <button class="btn btn-primary" type="button">Regresar</button>
+                    </a>
+                </div>
+            </form>
+            <br><br><br><br>
+    </body>
+    <footer th:replace="layout/plantilla::footer"></footer>    
+</html>

@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 @Slf4j
-
 public class vehiculoController {
     
     @Autowired
@@ -27,7 +26,7 @@ public class vehiculoController {
     
     @GetMapping("/nuevoVehiculo")
     public String nuevoVehiculo(Vehiculo vehiculo){
-        return "/administrador/vehiculos";
+        return "/administrador/modificarVehiculo";
     }
     
     @PostMapping("/guardarVehiculo")
@@ -40,7 +39,7 @@ public class vehiculoController {
     public String modificarVehiculo(Vehiculo vehiculo, Model model){
         vehiculo = vehiculoService.getVehiculo(vehiculo);
         model.addAttribute("vehiculo", vehiculo);
-        return "/administrador/vehiculos";
+        return "/administrador/modificarVehiculo";
     }
     
     @GetMapping("/eliminarVehiculo/{id}")

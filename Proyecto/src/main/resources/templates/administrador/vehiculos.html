@@ -13,16 +13,16 @@
     <header th:replace="layout/plantilla::header"></header>
 
     <body>
-        <div class="container-fluid" style="background-color: red">
+        <div class="container-fluid" style="background-color: #ffcc00">
             <h2>Lista de Vehiculos</h2>
-            <a th:href="@{/nuevoVehiculo}">Nuevo Vehiculo</a>
+            <a th:href="@{/nuevoVehiculo}">Agregar Vehiculo</a>
             <div th:if="${vehiculos != null and !vehiculos.empty}">
-                <table class="table table-dark table-borderless">
+                <table class="table table-striped table-hover">
                     <thead>
                         <tr>
                             <th>Marca</th>
                             <th>Modelo</th>
-                            <th>Ano</th>
+                            <th>Año</th>
                             <th>Precio</th>
                             <th>Modificar</th>
                             <th>Eliminar</th>
