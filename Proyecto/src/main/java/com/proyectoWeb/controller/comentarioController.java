@@ -18,7 +18,7 @@ public class comentarioController {
     
     @GetMapping("/administrador/comentarios")
     public String inicio(Model model){
-        log.info("Administrador está en el área de vehículos");
+        log.info("Administrador está en el área de comentarios");
         var comentarios=comentarioService.getComentarios();
         model.addAttribute("comentarios", comentarios);
         return "/administrador/comentarios";
