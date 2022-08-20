@@ -14,23 +14,40 @@
     <header th:replace="layout/plantilla::header"></header>
 
     <body>
-        <form id="formulario">
-            <label for ="nombre"><strong>Nombre:</strong></label><br>
-            <input type="text" id="nombre" name="nombre" placeholder="Digitar nombre">
+        <form th:action="@{/guardarComentario}"
+              method="post"
+              th:object="${comentario}">
             <br>
-            <label for ="email"><strong>Email:</strong></label><br>
-            <input type="email" id="email" name="email" placeholder="Digitar su correo">
-            <br>
-            <br>
-            <label for ="email"><strong>Comentario:</strong></label><br>
-            <textarea rows="10" cols="80" id="comentario" placeholder="Ingrese el comentario" name="comentario"></textarea>
-            <br>
-            <button type="button" style="background:#ffcc99">Enviar</button>
-            <button type="reset" style="background:#ffcc99">Reset</button>
-            <br><br><br>
+            <div class="mb-3">
+                <input type="hidden" name="id" th:field="*{id}"/>
+                <label for="nombre" class="form-label"><strong>Nombre:</strong></label>
+                <input type="text" name="nombre" th:field="*{nombre}" class="form-control" id="exampleFormControlInput1" placeholder="Digite su nombre">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label"><strong>Email</strong></label>
+                <input type="email" name="email" th:field="*{email}" class="form-control" id="exampleFormControlInput1" placeholder="Digite su email">
+            </div>
+            <div class="mb-3">
+                <label for="opinion" class="form-label"><strong>Comentario</strong></label>
+                <textarea class="form-control" name="opinion" th:field="*{opinion}" placeholder="Ingrese el comentario" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="d-grid gap-2 d-md-block">
+                 <button class="btn btn-primary me-md-2" type="button" style="background: black">
+                    <input type="submit" name="guardar" value="Guardar"/>
+                </button>
+                <a th:href="@{/nuevoComentario}">
+                     <button class="btn btn-primary me-md-2" type="button" style="background: black">
+                         Reset
+                     </button>
+                </a>
+            </div>
+            <br><br>
+            <a class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')"
+               th:href="@{/administrador/comentarios}" style= "background: red"
+               th:text="#{menu.comentarios}">
+                VER COMENTARIOS
+            </a>
         </form>
     </body>
-</html>
-</body>
-<footer th:replace="layout/plantilla::footer"></footer>
+    <footer th:replace="layout/plantilla::footer"></footer>
 </html>

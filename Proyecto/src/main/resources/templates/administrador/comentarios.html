@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://thymeleaf.org/extras/spring-security">
+    <head th:fragment="head">
+        <title>AcercaDe_Proyecto</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    </head>
+    <header th:replace="layout/plantilla::header"></header>
+
+    <body>
+        <div class="container-fluid" style="background-color: #ffcc00">
+            <h2>Lista de Comentarios</h2>
+            <a th:href="@{/nuevoComentario}">Agregar Comentario</a>
+            <div th:if="${comentarios != null and !comentarios.empty}">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Comentario</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="comentario : ${comentarios}">
+                            <td th:text="${comentario.nombre}"></td>
+                            <td th:text="${comentario.email}"></td>
+                            <td th:text="${comentario.opinion}"></td>
+                            <td><a th:href="@{/eliminarComentario/} + ${comentario.id}">Eliminar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:if="${comentarios == null or comentarios.empty}">
+                No tenemos lista de comentarios que mostrar
+            </div>
+    </body>
+    <footer th:replace="layout/plantilla::footer"></footer>
+</html>
