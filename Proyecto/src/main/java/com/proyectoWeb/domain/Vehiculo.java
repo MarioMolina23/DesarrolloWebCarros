@@ -22,15 +22,17 @@ public class Vehiculo implements Serializable {
     private String modelo;
     private String ano;
     private int precio;
+    private int cantidad;
 
     public Vehiculo() {
     }
-    
-    public Vehiculo(String marca, String modelo, String ano, int precio) {
+
+    public Vehiculo(String marca, String modelo, String ano, int precio, int cantidad) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
         this.precio = precio;
+        this.cantidad = cantidad;
     }
 
 }

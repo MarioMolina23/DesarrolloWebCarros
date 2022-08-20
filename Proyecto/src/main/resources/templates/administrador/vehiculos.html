@@ -24,6 +24,7 @@
                             <th>Modelo</th>
                             <th>Año</th>
                             <th>Precio</th>
+                            <th>Cantidad</th>
                             <th>Modificar</th>
                             <th>Eliminar</th>
                         </tr>
@@ -34,6 +35,7 @@
                             <td th:text="${vehiculo.modelo}"></td>
                             <td th:text="${vehiculo.ano}"></td>
                             <td th:text="${vehiculo.precio}"></td>
+                            <td th:text="${vehiculo.cantidad}"></td>
                             <td><a th:href="@{/modificarVehiculo/} + ${vehiculo.id}">Modificar</a></td>
                             <td><a th:href="@{/eliminarVehiculo/} + ${vehiculo.id}">Eliminar</a></td>
                         </tr>
