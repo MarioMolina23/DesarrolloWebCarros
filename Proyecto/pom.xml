@@ -14,7 +14,7 @@
     <name>proyectoWeb</name>
     <description>Proyecto del curso Desarrollo Web y Patrones</description>
     <properties>
-        <java.version>18</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -78,7 +78,12 @@
         <dependency>
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity5</artifactId>
-        </dependency>        
+        </dependency>     
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>6.17.0</version>
+        </dependency>      
     </dependencies>
 
     <build>
