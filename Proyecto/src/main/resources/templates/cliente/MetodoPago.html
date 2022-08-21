@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head th:replace="layout/plantilla::head"></head>
+<header th:replace="layout/plantilla::header"></header>
+
+<body class="bk">
+    <div class="sidenav">
+        <div class="login-main-text">>
+            <h1 class="text-center m-5">Metodo de Pago</h1>
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter nombre">
+                </div>
+                <div class="form-group">
+                    <label for="Numero Tarjeta">Numero Tarjeta</label>
+                    <input type="Numero Tarjeta" class="form-control" id="Numero Tarjeta" name="Numero Tarjeta"
+                        placeholder="Enter Numero Tarjeta">
+                </div>
+                <div class="form-group">
+                    <label for="Vencimiento">Vencimiento</label>
+                    <input type="Vencimiento" class="form-control" id="Vencimiento" name="Vencimiento" placeholder="Enter Vencimiento">
+                </div>
+                <div class="form-group">
+                    <label for="Cod Seguridad">Cod Seguridad</label>
+                    <input type="text" class="form-control" id="Cod Seguridad" name="Cod Seguridad" placeholder="Enter Cod Seguridad">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <section>
+        <img style="height: 400px; width: 650px; margin-left:50%; margin-top: 15%; "
+            src="https://149478393.v2.pressablecdn.com/wp-content/uploads/2018/06/d44109538333757f601a769a1db74a108dfc53ff.png"
+            alt="">
+    </section>
+</body>
+<footer style="margin-top: 40%;" th:replace="layout/plantilla::footer"></footer>
+
+</html>

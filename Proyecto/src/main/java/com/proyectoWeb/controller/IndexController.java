@@ -80,4 +80,9 @@ public class indexController {
     public String admiVehiculo() {
         return "/administrador/vehiculos";
     }
+    @GetMapping("/cliente/MetodoPago")
+    public String MetodoPago() {
+        return "/cliente/MetodoPago";
+    }
+
 }

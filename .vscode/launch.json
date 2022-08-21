@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ProyectoWebApplication<proyectoWeb>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.proyectoWeb.ProyectoWebApplication",
+            "projectName": "proyectoWeb",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

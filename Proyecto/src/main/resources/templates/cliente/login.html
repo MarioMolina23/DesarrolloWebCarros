@@ -1,45 +1,92 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://thymeleaf.org/extras/spring-security">
-    <head th:fragment="head">
-        <title>Login_Proyecto</title>
-        <meta charset="UTF-8"/>
-        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
-        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
-        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
-        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-    </head>
-    <header th:replace="layout/plantilla::header"></header>
-
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="text-center m-5">Login</h1>
-                    <form action="" method="post">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                                   placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</head>
+<header>       
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid" >
+            <form method="POST" th:action="@{/logout}">
+                <a href="#" onclick="this.parentNode.submit();" class="nav-link">
+                    <i class="fas fa-user-times"></i> [[#{plantilla.logout}]]
+                </a>
+            </form>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">             
+                        <small>.</small>
+                        <a class="nav-link active" style= "color:white" aria-current="page" th:href="@{/index}">HOME</a>
+                        <small>.</small>
+                    </li>
+                    <li class="nav-item">
+                        <small>.</small>
+                        <a class="nav-link" style= "color:white" th:href="@{/cliente/galeria}"
+                           th:text="#{menu.galeria}">GALERÍA</a>
+                    </li>
+                    <li class="nav-item">
+                        <small>.</small>
+                        <a class="nav-link" style= "color:white" th:href="@{/nuevoComentario}"
+                           th:text="#{menu.contacto}">CONTACTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <small>.</small>
+                        <a class="nav-link" style= "color:white" th:href="@{/cliente/acercaDe}"
+                           th:text="#{menu.acercaDe}">ACERCA DE</a>
+                    </li>
+                    <li class="nav-item">
+                        <small>.</small>
+                        <a class="nav-link" style= "color:white" th:href="@{/cliente/terminosCondiciones}"
+                           th:text="#{menu.terminos}">TÉRMINOS Y CONDICIONES</a>
+                    </li>
+                    <li class="nav-item">
+                        <small>...............................................</small>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasRole('ROLE_CLIENTE')">
+                        <small>.</small>
+                        <a class="nav-link" style= "color:yellow" th:href="@{/cliente/login}">LOGIN</a>
+                    </li>
+                    <li class="nav-item" sec:authorize="hasRole('ROLE_CLIENTE')">
+                        <small>.</small>
+                        <p style= "color:yellow">|</p>
+                    </li>                            
+                    <li class="nav-item">
+                        <small>.</small>
+                        <a class="nav-link" style= "color:yellow" th:href="@{/cliente/register}"
+                           th:text="#{menu.registrarse}">REGISTRARSE</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+</header>
 
-    </body>
-    <br><br><br>
-    <footer th:replace="layout/plantilla::footer"></footer>
+<body class="bk">
+    <div class="sidenav">
+        <div class="login-main-text">
+            <div class="login-form">
+                <form method="post" th:action="@{/login}">
+                    <div class="row py-1 mb-2 bg-light">
+                        <label for="username">Usuario</label>
+                        <input type="text" name="username" id="username"/>
+                    </div>
+                    <div class="row py-1 mb-2 bg-light">
+                        <label for="password">contraseña</label>
+                        <input type="password" name="password" id="password"/>
+                    </div>
+                <button type="submit"  class="btn btn-black">Login</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    <section >
+        <img style="height: 400px; width: 650px; margin-left:50%; margin-top: 15%; " src="https://149478393.v2.pressablecdn.com/wp-content/uploads/2018/06/d44109538333757f601a769a1db74a108dfc53ff.png" alt="">
+    </section>
+</body>
+<footer style="margin-top: 40%;" th:replace="layout/plantilla::footer"></footer>
 </html>
