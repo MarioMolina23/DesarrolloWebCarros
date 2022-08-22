@@ -40,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/")
                     .hasAnyRole("ADMIN", "CLIENTE")
                 .and()
-                    .formLogin().permitAll().defaultSuccessUrl("/index", true)
+                    .formLogin().loginPage("/cliente/login").permitAll().defaultSuccessUrl("/index", true)
                 .and()
                     .exceptionHandling().accessDeniedPage("/errores/403");
     }   
