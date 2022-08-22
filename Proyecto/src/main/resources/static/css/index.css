@@ -8,9 +8,9 @@ body {
 }
 
 .sidenav {
-    height: 100%;
-    overflow-x: hidden;
-    padding-top: 20px;
+    height: 50%;
+    overflow-x: no-display;
+    padding-top: 40px;
 }
 
 
@@ -30,7 +30,7 @@ body {
     }
 
     .register-form {
-        margin-top: 25%;
+        margin-top: 5%;
     }
 }
 
@@ -41,25 +41,24 @@ body {
 
     .sidenav {
         width: 40%;
-        position: fixed;
+        position: absolute;
         z-index: 1;
-        top: 0;
+        top: 15%;
         left: 0;
     }
 
     .login-form {
-        margin-top: 40%;
+        margin-top: 0%;
         margin-left: 20%;
     }
 
     .register-form {
-        margin-top: 20%;
+        margin-top: 5%;
     }
 }
 
-
 .login-main-text {
-    margin-top: 20%;
+    margin-top: 7%;
     padding: 60px;
     color: rgb(5, 5, 5);
 }
@@ -84,4 +83,3 @@ body {
     color: whitesmoke;
     padding-left: 50px;
 }
-

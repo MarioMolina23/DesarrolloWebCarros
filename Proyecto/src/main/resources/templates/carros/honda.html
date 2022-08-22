@@ -17,8 +17,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-7">
-                    <h1>DESCRIPCIÓN</h1>
-                    <p>
+                    <h1 th:text="#{carro.descripcion}">DESCRIPCIÓN</h1>
+                    <p th:text="#{carro.honda}">
                         El interior del Honda Civic de undécima generación es un gran paso adelante con respecto a su predecesor.
                         Su ergonomía está mucho más trabajada y su diseño tiene un aspecto retrofuturista que encaja a la
                         perfección con la filosofía de diseño de la carrocería del vehículo. Mención especial merecen los aireadores,
@@ -32,7 +32,7 @@
                                 th:text="#{index.comprar}"><span>Comprar</span></button>
                     </a>
                     <a th:href="@{/ReporteHondas}"
-                       class="btn btn-primary" style="background: black">
+                       class="btn btn-primary" style="background: black" th:text="#{carro.pdf}">
                         <i class="fas fa-file"></i>Documento PDF</a>                    
                 </div>
                 <div class="col-md-2">

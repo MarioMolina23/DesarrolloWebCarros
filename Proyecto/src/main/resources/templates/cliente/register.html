@@ -2,48 +2,52 @@
 
 <head th:replace="layout/plantilla::head"></head>
 <header th:replace="layout/plantilla::header"></header>
-
-<body class="bk">
-    <div class="sidenav">
-        <div class="login-main-text">>
-            <h1 class="text-center m-5">Register</h1>
-            <form action="" method="post">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" name="password"
-                        placeholder="Enter password">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter phone">
-                </div>
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter address">
-                </div>
-                <div class="form-group">
-                    <label for="city">City</label>
-                    <input type="text" class="form-control" id="city" name="city" placeholder="Enter city">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+<link rel="stylesheet" th:href="@{/css/register.css}">
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <h1 class="text-center m-5" th:text="#{registro.titulo}">Registro</h1>
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="username" th:text="#{registro.usuario}">Usuario</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" th:text="#{registro.contrasena}">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                               placeholder="Enter password">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" th:text="#{registro.correo}">Correo</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" th:text="#{registro.telefono}">Teléfono</label>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="address" th:text="#{registro.direccion}">Dirección</label>
+                        <input type="text" class="form-control" id="address" name="address" placeholder="Enter address">
+                    </div>
+                    <div class="form-group">
+                        <label for="city" th:text="#{registro.ciudad}">Ciudad</label>
+                        <input type="text" class="form-control" id="city" name="city" placeholder="Enter city">
+                    </div>
+                    <button type="submit" class="btn btn-primary" th:text="#{registro.enviar}">Enviar</button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <img src="https://149478393.v2.pressablecdn.com/wp-content/uploads/2018/06/d44109538333757f601a769a1db74a108dfc53ff.png"
+                     class="img-responsive"
+                     alt="Some picture" 
+                     width="700" 
+                     height="407"
+                     left="250"/>
+            </div>
         </div>
     </div>
-
-    <section>
-        <img style="height: 400px; width: 650px; margin-left:50%; margin-top: 5%; "
-            src="https://149478393.v2.pressablecdn.com/wp-content/uploads/2018/06/d44109538333757f601a769a1db74a108dfc53ff.png"
-            alt="">
-    </section>
 </body>
-<footer style="margin-top: 40%;" th:replace="layout/plantilla::footer"></footer>
-
+    <br><br>
+    <footer th:replace="layout/plantilla::footer"></footer>
 </html>

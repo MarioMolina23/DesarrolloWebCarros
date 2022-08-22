@@ -17,8 +17,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-7">
-                    <h1>DESCRIPCIÓN</h1>
-                    <p>
+                    <h1 th:text="#{carro.descripcion}">DESCRIPCIÓN</h1>
+                    <p th:text="#{carro.bmw}">
                         Amplio, poderoso y dinámico. El BMW X6 combina la imponente presencia de un modelo BMW
                         X y la deportividad de un coupé. La potente parte frontal incorpora unas impresionantes tomas de
                         aire que ofrecen una idea de la potencia del vehículo. La gran parrilla doble de estilo deportivo
@@ -32,7 +32,7 @@
                                 th:text="#{index.comprar}"><span>Comprar</span></button>
                     </a>
                     <a th:href="@{/ReporteBmws}"
-                       class="btn btn-primary" style="background: black">
+                       class="btn btn-primary" style="background: black" th:text="#{carro.pdf}">
                         <i class="fas fa-file"></i>Documento PDF</a>
                 </div>
                 <div class="col-md-2">

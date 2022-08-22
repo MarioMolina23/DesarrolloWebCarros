@@ -72,11 +72,11 @@
             <div class="login-form">
                 <form method="post" th:action="@{/cliente/login}">
                     <div class="row py-1 mb-2 bg-light">
-                        <label for="username">Usuario</label>
+                        <label for="username" th:text="#{login.usuario}">Usuario</label>
                         <input type="text" name="username" id="username"/>
                     </div>
                     <div class="row py-1 mb-2 bg-light">
-                        <label for="password">contraseña</label>
+                        <label for="password" th:text="#{login.contrasena}">Contraseña</label>
                         <input type="password" name="password" id="password"/>
                     </div>
                     <button type="submit"  class="btn btn-black">Login</button>

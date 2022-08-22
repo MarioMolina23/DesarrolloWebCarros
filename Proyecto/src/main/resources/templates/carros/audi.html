@@ -17,8 +17,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-7">
-                    <h1>DESCRIPCIÓN</h1>
-                    <p class="text-muted">
+                    <h1 th:text="#{carro.descripcion}">DESCRIPCIÓN</h1>
+                    <p th:text="#{carro.audi}">
                         Bajo la esculpida carrocería del Audi A5 se esconde la plataforma MQB Evo del Grupo Volkswagen. Se trata de una arquitectura muy conocida, empleada en otros modelos como por ejemplo el A4. Eso quiere decir que podemos englobarlo dentro de la categoría de las berlinas compactas, dentro del segmento D. La plataforma MQB nos deja con unas medidas de 4,69 metros de largo, 1,84 metros de ancho y 1,37 metros de alto. Estas medidas se aplican tanto a la carrocería coupé como a la versión descapotable, aunque en ese caso la altura sube 1 centímetro. La unidad de cinco puertas, Sportback, amplía dichas cotas, llegando a los 4,75 metros de largo, 1,84 metros de ancho y 1, 39 de alto.
                     </p>
                     <a th:href="@{/comprar/compra}">
@@ -26,7 +26,7 @@
                                 th:text="#{index.comprar}"><span>Comprar</span></button>
                     </a>
                     <a th:href="@{/ReporteAudis}"
-                       class="btn btn-primary" style="background: black">
+                       class="btn btn-primary" style="background: black" th:text="#{carro.pdf}">
                         <i class="fas fa-file"></i>Documento PDF</a>
                 </div>
                 <div class="col-md-2">

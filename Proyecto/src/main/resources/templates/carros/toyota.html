@@ -17,8 +17,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-7">
-                    <h1>DESCRIPCIÓN</h1>
-                    <p>
+                    <h1 th:text="#{carro.descripcion}">DESCRIPCIÓN</h1>
+                    <p th:text="#{carro.toyota}">
                         El Toyota Corolla se asienta sobre la plataforma TNGA (Toyota New Global Architecture) y es más bajo
                         (cuatro centímetros), más ancho (tres centímetros) y más largo que su predecesor: el Toyota Auris. La
                         versión de cinco puertas mide 4,37 metros de largo, 1,79 metros de ancho y 1,43 metros de alto; la
@@ -34,7 +34,7 @@
                                 th:text="#{index.comprar}"><span>Comprar</span></button>
                     </a>
                     <a th:href="@{/ReporteToyotas}"
-                       class="btn btn-primary" style="background: black">
+                       class="btn btn-primary" style="background: black" th:text="#{carro.pdf}">
                         <i class="fas fa-file"></i>Documento PDF</a>                    
                 </div>
                 <div class="col-md-2">

@@ -21,40 +21,40 @@
                 <br>
                 <div class="mb-3">
                     <input type="hidden" name="id" th:field="*{id}"/>
-                    <label for="nombre" class="form-label"><strong>Nombre:</strong></label>
+                    <label for="nombre" class="form-label" th:text="#{contacto.nombre}"><strong>Nombre:</strong></label>
                     <input type="text" name="nombre" th:field="*{nombre}" class="form-control" id="exampleFormControlInput1" placeholder="Digite su nombre">
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label"><strong>Email</strong></label>
+                    <label for="email" class="form-label" th:text="#{contacto.email}"><strong>Correo</strong></label>
                     <input type="email" name="email" th:field="*{email}" class="form-control" id="exampleFormControlInput1" placeholder="Digite su email">
                 </div>
                 <div class="mb-3">
-                    <label for="opinion" class="form-label"><strong>Comentario</strong></label>
+                    <label for="opinion" class="form-label" th:text="#{contacto.comentario}"><strong>Comentario</strong></label>
                     <textarea class="form-control" name="opinion" th:field="*{opinion}" placeholder="Ingrese el comentario" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <div class="d-grid gap-2 d-md-block">
                     <section id="contenedor">
                         <a href="javascript:abrir()">
-                            <button class="btn btn-primary me-md-2" type="button" style="background: black">
+                            <button class="btn btn-primary me-md-2" type="button" style="background: black" th:text="#{contacto.enviar}">
                                 Enviar
                             </button>
                         </a>
                         <div class="ventana" id="llamar">
                             <div class="d-grid gap-2 d-md-block">
-                                Seguro que deseas enviar el mensaje:
+                                <p th:text="#{contacto.seguro}">Seguro que deseas enviar el mensaje:</p>
                                 <br>
                                 <br>
-                                <input type="submit" name="guardar"  class="btn btn-primary me-md-2" style="background: black" 
-                                       value="Guardar"/>
+                                <input type="submit" name="guardar"  class="btn btn-primary me-md-2"
+                                       style="background: black" value="Guardar"/>
                                 <a th:href="@{/nuevoComentario}">
-                                    <button class="btn btn-primary me-md-2" type="button" style="background: black">
+                                    <button class="btn btn-primary me-md-2" type="button" style="background: black" th:text="#{contacto.cancelar}">
                                         Cancelar
                                     </button>
                                 </a>
                             </div>
                         </div>
                         <a th:href="@{/nuevoComentario}">
-                            <button class="btn btn-primary me-md-2" type="button" style="background: black">
+                            <button class="btn btn-primary me-md-2" type="button" style="background: black" th:text="#{contacto.reset}">
                                 Reset
                             </button>
                         </a>

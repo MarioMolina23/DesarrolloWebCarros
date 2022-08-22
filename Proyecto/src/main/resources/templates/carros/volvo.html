@@ -17,8 +17,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-7">
-                    <h1>DESCRIPCIÓN</h1>
-                    <p>
+                    <h1 th:text="#{carro.descripcion}">DESCRIPCIÓN</h1>
+                    <p th:text="#{carro.volvo}">
                         En el punto superior de la gama está la versión T8 Twin-Engine. Combina un motor gasolina 2.0 Turbo
                         de 303 CV con un propulsor eléctrico de 145 CV que propulsa el eje trasero. Es un híbrido enchufable,
                         que extrae su energía de una batería de iones de litio de 18,8 kWh situada bajo el suelo del coche, en
@@ -32,7 +32,7 @@
                                 th:text="#{index.comprar}"><span>Comprar</span></button>
                     </a>
                     <a th:href="@{/ReporteVolvos}"
-                       class="btn btn-primary" style="background: black">
+                       class="btn btn-primary" style="background: black" th:text="#{carro.pdf}">
                         <i class="fas fa-file"></i>Documento PDF</a>                    
                 </div>
                 <div class="col-md-2">
