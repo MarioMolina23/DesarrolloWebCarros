@@ -36,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/cliente/register", "/cliente/terminosCondiciones", "/carros/audi", "/carros/bmw",
                         "/carros/honda", "/carros/mitsubishi", "/carros/toyota", "/carros/volvo",
                         "/comprar/compra", "/cliente/MetodoPago", "/nuevoComentario", "/index", "/index(lang=es)",
-                        "/index(lang=en)"
+                        "/index(lang=en)", "/comprar/factura"
                 )
                     .hasAnyRole("ADMIN","CLIENTE")
                 .antMatchers("/")

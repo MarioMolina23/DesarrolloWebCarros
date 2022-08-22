@@ -112,10 +112,10 @@ public class indexController {
         return "/administrador/vehiculos";
     }
 
-    @GetMapping("/cliente/MetodoPago")
-    public String MetodoPago() {
-        return "/cliente/MetodoPago";
-    }
+    @GetMapping("/comprar/factura")
+    public String factura() {
+        return "/comprar/factura";
+    }    
 
     @GetMapping(value = "/ReporteAudis", produces = MediaType.APPLICATION_PDF_VALUE)
     public @ResponseBody
