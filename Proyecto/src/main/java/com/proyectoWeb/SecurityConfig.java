@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/administrador/vehiculos", "/administrador/modificarVehiculo",
-                        "/administrador/comentarios"
+                        "/administrador/comentarios", "/"
                 )
                     .hasRole("ADMIN")
                 .antMatchers("/cliente/acercaDe", "/cliente/contacto", "/cliente/galeria","/cliente/login",
